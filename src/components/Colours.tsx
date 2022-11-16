@@ -4,6 +4,9 @@ const Colours: React.FC = () => {
   const confetti = () => {
     const fire = document.getElementById("fire");
     fire?.classList.toggle("change");
+    setTimeout(() => {
+      fire?.classList.toggle("change");
+    }, 2500);
   };
 
   return (

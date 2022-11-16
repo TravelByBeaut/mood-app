@@ -82,6 +82,15 @@
   display: none;
   width: 300;
   height: 300;
+  animation: fire 2.5s;
+}
+@keyframes fire {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 .change#fire {
   display: block;

@@ -1,3 +1,7 @@
+html {
+  background-color: black;
+}
+
 .App {
   text-align: center;
   background-color: rgb(67, 55, 82);
@@ -11,7 +15,7 @@
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-  padding: 5vh;
+  padding-bottom: 5vh;
   font-size: xx-large;
 }
 .container {
@@ -60,6 +64,16 @@
   display: inline-flex;
   flex-wrap: wrap;
   margin-left: 20vw;
+  animation: fade-in 0.5s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .emotion {
@@ -82,9 +96,10 @@
   display: none;
   width: 300;
   height: 300;
-  animation: fire 2.5s;
+  animation: happy 1s;
+  animation-delay: 1s;
 }
-@keyframes fire {
+@keyframes happy {
   from {
     opacity: 1;
   }
@@ -92,13 +107,138 @@
     opacity: 0;
   }
 }
-.change#fire {
+.change#happy {
+  display: block;
+}
+
+.change-excited#app {
+  animation: shake 0.25s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(5deg);
+  }
+  50% {
+    transform: rotate(0eg);
+  }
+  75% {
+    transform: rotate(-5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.change-disgust#app {
+  background-image: linear-gradient(green, rgb(3, 73, 3));
+}
+
+.change#sad-rain {
+  display: block;
+}
+.change-scared#app {
+  display: none;
+}
+
+.sad-rain {
+  display: none;
+  width: 300;
+  height: 300;
+  position: absolute;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.angry-fire {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  animation: fade-out 1s 1s;
+}
+@keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.change#angry-fire {
+  display: block;
+}
+
+.menu {
+  display: block;
+  width: 100%;
+  padding-top: 15px;
+}
+
+.change.menu {
+  background-color: rgb(67, 55, 82);
+}
+
+.change.sidebar {
+  display: block;
+}
+.sidebar {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background-color: rgb(67, 55, 82);
+  position: fixed;
+  z-index: 1;
+  height: 100%;
+  overflow: auto;
+  display: none;
+  overflow-y: hidden;
+}
+.sidebar-button {
+  margin: 30px;
+}
+.bar1,
+.bar2,
+.bar3 {
+  display: block;
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin: 6px 0;
+  margin-left: 20px;
+  transition: 0.4s;
+}
+
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+.change .bar2 {
+  opacity: 0;
+}
+
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
+.change.sidebar {
+  display: block;
+}
+.active {
   display: block;
 }
 
 @media only screen and (min-width: 900px) {
   .colours {
     margin-left: 5%;
+  }
+  .change#colours {
+    display: none;
   }
   .emotion {
     padding: 25px;
@@ -118,5 +258,9 @@
   .confetti {
     width: 400;
     height: 400;
+  }
+  .angry-fire {
+    width: 40%;
+    left: 30%;
   }
 }

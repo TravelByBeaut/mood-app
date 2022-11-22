@@ -16,7 +16,12 @@ const NavBar: React.FC = () => {
         <section className="bar3"></section>
       </section>
       <section className="sidebar" id="sidebar">
-        <button className="active sidebar-button">Home</button>
+        <Link to="/" className="sidebar-button" onClick={menuChange}>
+          Home
+        </Link>
+        <Link to="/diary" className="sidebar-button" onClick={menuChange}>
+          Diary
+        </Link>
       </section>
     </section>
   );

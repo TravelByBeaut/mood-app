@@ -237,13 +237,19 @@ html {
   display: block;
 }
 
-.entry-box {
+.entry-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-entry {
   border: none;
   border-radius: 50px;
   padding: 20px 30px;
   font-size: large;
   box-shadow: inset 0 0 5px black;
   margin: 20px;
+  text-align: center;
 }
 .entry-submit {
   position: relative;
@@ -256,14 +262,13 @@ html {
   color: white;
   background-color: rgb(200, 167, 241);
   box-shadow: 0 0 5px black;
-  margin-top: 65%;
 }
 .entry-submit:active {
   background-color: rgb(67, 55, 82);
 }
 .dropdown {
   margin: 0 20px 20px;
-  padding: 8px;
+  padding: 10px;
   font-size: medium;
   background-color: rgb(200, 167, 241);
   border: 2px solid rgb(67, 55, 82);
@@ -284,7 +289,6 @@ html {
   background-color: rgb(200, 167, 241);
   color: white;
   width: 80%;
-  position: absolute;
   margin: 20px;
   padding: 15px;
   display: grid;
@@ -292,6 +296,44 @@ html {
   border-radius: 20px 20px 20px 20px;
   overflow: auto;
   max-height: 170px;
+}
+.sleep-entry {
+  -moz-appearance: textfield;
+  appearance: textfield;
+  text-align: center;
+  width: 60%;
+  font-size: large;
+  border: none;
+  border-radius: 50px;
+  padding: 20px 30px;
+  box-shadow: inset 0 0 5px black;
+}
+.down,
+.up {
+  position: absolute;
+  font-size: xx-large;
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  border: 0;
+  background-color: white;
+  margin-top: 5px;
+  opacity: 1;
+}
+.down {
+  margin-left: 5px;
+}
+.up {
+  margin-left: -55px;
+}
+.down:active,
+.up:active {
+  opacity: 0.5;
+}
+.gratitude-entry {
+  height: 200px;
+  width: 80%;
+  text-align: center;
 }
 
 @media only screen and (min-width: 900px) {
@@ -323,5 +365,22 @@ html {
   .angry-fire {
     width: 40%;
     left: 30%;
+  }
+  .dropdown {
+    width: 30%;
+  }
+  .sleep-entry {
+    width: 25%;
+  }
+  .entry-box {
+    width: 40%;
+  }
+  .entry-entered {
+    width: 90%;
+    margin: 30px;
+    margin-left: 4%;
+  }
+  .entry-centered {
+    margin-left: -2%;
   }
 }

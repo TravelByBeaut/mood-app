@@ -16,9 +16,11 @@ const NavBar: React.FC = () => {
         <section className="bar3"></section>
       </section>
       <section className="sidebar" id="sidebar">
+        <br />
         <Link to="/" className="sidebar-button" onClick={menuChange}>
           Home
         </Link>
+        <br />
         <Link to="/diary" className="sidebar-button" onClick={menuChange}>
           Diary
         </Link>

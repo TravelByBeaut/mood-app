@@ -121,28 +121,26 @@ const JournalEntry: React.FC<Props> = ({ mood, setMood }) => {
           <option>more than 3 hours</option>
         </select>
         <p className="dropdown-text">Gratitude entry: 1-3 items</p>
-        <input
+        <textarea
           value={gratitude}
-          type="input"
           placeholder="I am grateful for..."
           className="gratitude-entry"
           onChange={(event) => {
             setGratitude(event.target.value);
           }}
         />
-      </form>
-      <section className="entry-entered">
-        <section className="entry-centered">
-          <p>I am feeling {mood}</p>
-          <p>because</p>
-          <p>I was {event}</p>
-          <p>
-            I got {sleep} {sleep === 1 ? "hour" : "hours"} of sleep
-          </p>
-          <p>I did {exercise} of exercise</p>
+        <section className="entry-entered">
+          <section className="entry-centered">
+            <p>I am feeling {mood}</p>
+            <p>because</p>
+            <p>I was {event}.</p>
+            <p>
+              I got {sleep} {sleep === 1 ? "hour" : "hours"} of sleep.
+            </p>
+            <p>I did {exercise} of exercise.</p>
+            <p>I am grateful for {gratitude}</p>
+          </section>
         </section>
-      </section>
-      <form className="submit-section">
         <button type="submit" className="entry-submit">
           Enter
         </button>

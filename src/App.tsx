@@ -6,11 +6,9 @@ import NavBar from "./components/NavBar";
 import { Route, Routes } from "react-router-dom";
 import Home from "./components/Home";
 import MoodDiary from "./components/MoodDiary";
-import { Mood } from "./components/model";
 
 const App: React.FC = () => {
   const [mood, setMood] = useState<string>("");
-  const [moods, setMoods] = useState<Mood[]>([]);
   return (
     <div className="App" id="app">
       <img src={Rain} alt="rain" className="sad-rain" id="sad-rain" />
